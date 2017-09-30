@@ -1,0 +1,17 @@
+language: java
+env:
+  matrix:
+  - JDK=8
+dist: trusty
+matrix:
+  allow_failures:
+  - env: JDK=8-ea
+deploy:
+  provider: heroku
+  api_key:
+    secure: bE7mZ3yS1hYNLLY/BQD+olgERksRXZHUU0AmQYgQDFEy86GykKlRQERoaSORrw2o7FiShtBxvXZUr9sZZ7qlWXTAWu3pWZ19QznvcgSisa1F2G3gW1WoQ6hibTI8F5ZtfQTUnIRraagSAJ0NLpE4Z3w3xAkaCiHWXX41AhCcDGE=
+  app: murmuring-castle-89452
+  on:
+    repo: heroku/java-getting-started
+true:
+  repo: mrkansa/rev-eng-automation
